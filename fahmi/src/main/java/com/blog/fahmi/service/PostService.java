@@ -2,6 +2,7 @@ package com.blog.fahmi.service;
 
 import com.blog.fahmi.domain.Post;
 import com.blog.fahmi.repository.PostRepository;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -10,9 +11,12 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@RequiredArgsConstructor
 public class PostService {
     private final PostRepository postRepository;
+
+    public PostService(PostRepository postRepository) {
+        this.postRepository = postRepository;
+    }
 
     public Post createPost(Post post) {
         post.setCreatedAt(LocalDateTime.now());

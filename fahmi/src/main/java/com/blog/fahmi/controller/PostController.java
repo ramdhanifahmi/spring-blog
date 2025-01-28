@@ -3,6 +3,7 @@ package com.blog.fahmi.controller;
 import com.blog.fahmi.domain.Post;
 import com.blog.fahmi.service.PostService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +13,8 @@ import java.util.List;
 @RequestMapping("/api/posts")
 @RequiredArgsConstructor
 public class PostController {
-    private final PostService postService;
+    @Autowired
+    PostService postService;
 
     @PostMapping
     public ResponseEntity<Post> createPost(@RequestBody Post post) {

@@ -1,4 +1,4 @@
-
+version: "3.8" 
 services:
   mysql:
     image: mysql:8.0
@@ -13,7 +13,7 @@ services:
       - "3306:3306"
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin:latest
     container_name: phpmyadmin
     restart: always
     environment:
@@ -22,4 +22,3 @@ services:
       PMA_PASSWORD: blogpassword
     ports:
       - "8080:80"
-
