@@ -2,8 +2,6 @@ package com.blog.fahmi.service;
 
 import com.blog.fahmi.domain.Post;
 import com.blog.fahmi.repository.PostRepository;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
